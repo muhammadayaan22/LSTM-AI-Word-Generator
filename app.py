@@ -3,7 +3,9 @@ import pickle
 import random
 
 # Load model
-
+with open("model.pkl", "rb") as f:
+    model = pickle.load(f)
+    
 def generate_text(seed, num_words):
     words = seed.lower().split()
 
